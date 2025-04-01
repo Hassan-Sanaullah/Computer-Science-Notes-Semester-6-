@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 305.5
   },
   "right": {
     "id": "6aa22bc215ba80b2",
@@ -162,7 +161,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -179,7 +178,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ddef1f82e5574311",
+  "active": "d83e62357cff3743",
   "lastOpenFiles": [
     "Computer Vision/4. Color Transformations.md",
     "Computer Vision/6. Spatial Filtering.md",
