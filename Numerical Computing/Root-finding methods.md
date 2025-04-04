@@ -786,7 +786,7 @@ This formula comes from the x-intercept of the line joining the points $(a, f(a)
 
 ---
 
-###  When Do You Replace $x$, and With What?
+###  When Do You Replace , and With What?
 
 After each iteration:
 
@@ -804,19 +804,110 @@ After each iteration:
 
 **You never replace both** $a$ and $b$ in the same iteration — only one side is updated depending on where the sign change occurs.
 
----
+##  Regula Falsi Method Example (3 Iterations)
 
-###  Advantages
+###  Goal:
 
-- Generally faster than Bisection Method
-- Doesn’t require the derivative like Newton-Raphson
-
----
-
-###  Drawbacks
-
-- Can converge slowly if one side of the interval doesn't move (can "stall" if $f(a)$ or $f(b)$ stays close to 0).
+Solve the equation:
+$$
+f(x) = x^3 + x - 1 = 0
+$$
 
 ---
 
-Let me know if you'd like an example with 3 iterations too!
+### Step 1: Choose initial interval
+
+Let:
+- $a = 0$
+- $b = 1$
+
+Check:
+- $f(0) = 0^3 + 0 - 1 = -1$
+- $f(1) = 1^3 + 1 - 1 = 1$
+
+So:
+$$
+f(a) \cdot f(b) = -1 \cdot 1 < 0 \quad \text{✅ valid}
+$$
+
+---
+
+### Iteration 1:
+
+Use the Regula Falsi formula:
+
+$$
+c = b - \frac{f(b)(b - a)}{f(b) - f(a)} = 1 - \frac{1(1 - 0)}{1 - (-1)} = 1 - \frac{1}{2} = 0.5
+$$
+
+Compute:
+- $f(c) = f(0.5) = (0.5)^3 + 0.5 - 1 = 0.125 + 0.5 - 1 = -0.375$
+
+Now check signs:
+- $f(a) = -1$
+- $f(c) = -0.375$
+
+So $f(a) \cdot f(c) > 0$, but $f(b) \cdot f(c) < 0$
+
+➡️ Update: $a \leftarrow c = 0.5$
+
+---
+
+### Iteration 2:
+
+Now: $a = 0.5$, $b = 1$
+
+Compute:
+- $f(a) = -0.375$
+- $f(b) = 1$
+
+Apply formula:
+
+$$
+c = 1 - \frac{1(1 - 0.5)}{1 - (-0.375)} = 1 - \frac{0.5}{1.375} \approx 1 - 0.3636 = 0.6364
+$$
+
+Compute:
+- $f(0.6364) = (0.6364)^3 + 0.6364 - 1 \approx 0.2575 + 0.6364 - 1 = -0.1061$
+
+Check signs:
+- $f(a) = -0.375$
+- $f(c) = -0.1061$
+
+Still same sign, so update:
+➡️ $a \leftarrow c = 0.6364$
+
+---
+
+### Iteration 3:
+
+Now: $a = 0.6364$, $b = 1$
+
+Compute:
+- $f(a) \approx -0.1061$
+- $f(b) = 1$
+
+Apply formula:
+
+$$
+c = 1 - \frac{1(1 - 0.6364)}{1 - (-0.1061)} = 1 - \frac{0.3636}{1.1061} \approx 1 - 0.3287 = 0.6713
+$$
+
+Compute:
+- $f(0.6713) = (0.6713)^3 + 0.6713 - 1 \approx 0.3025 + 0.6713 - 1 = -0.0262$
+
+Check signs:
+- $f(a) \cdot f(c) < 0$ still
+
+Update: $a \leftarrow c = 0.6713$
+
+---
+
+### Final Approximation After 3 Iterations:
+
+Current approximation:
+$$
+x \approx 0.6713
+$$
+
+The function value is getting closer to 0, so the root is being approached.
