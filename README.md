@@ -1,11 +1,11 @@
-# 📚 BS Computer Science Notes – 6th Semester
+#  BS Computer Science Notes – 6th Semester
 
 Welcome to my **6th Semester BS Computer Science Notes** repository!  
 This collection contains well-organized notes for all my subjects, written in **Markdown** and optimized for viewing in **Obsidian**.
 
 ---
 
-## 📂 Subjects Included
+##  Subjects Included
 
 4. **Computer Communication and Networks**
 3. **Computer Vision**
@@ -15,7 +15,7 @@ This collection contains well-organized notes for all my subjects, written in **
 
 ---
 
-## 📘 How to Use
+##  How to Use
 
 These notes are written in **Markdown** with Obsidian-style formatting.  
 To get the best experience:
