@@ -35,18 +35,6 @@ To get the best experience:
 - Easy to extend with your own notes
 
 
----
-
-## 📜 License
-
-This repository is shared for educational purposes.  
-Feel free to fork and improve upon it for your own learning. If you share, **give credit**!
-
----
-
-## 🙌 Contributions
-
-Spotted an error or want to add more content?  
 Feel free to open an issue or pull request.
 
 ---
